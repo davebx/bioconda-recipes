@@ -1,0 +1,9 @@
+
+Loaded 'libv3/UtilityFunctions.bf' from /home/inithello/miniconda3/envs/__hyphy@2.3.14/lib/hyphy/TemplateBatchFiles/libv3/UtilityFunctions.bf
+Loaded 'IOFunctions.bf' from /home/inithello/miniconda3/envs/__hyphy@2.3.14/lib/hyphy/TemplateBatchFiles/libv3/IOFunctions.bf
+Already loaded 'libv3/UtilityFunctions.bf' from /home/inithello/miniconda3/envs/__hyphy@2.3.14/lib/hyphy/TemplateBatchFiles/libv3/UtilityFunctions.bf
+Loaded 'convenience/regexp.bf' from /home/inithello/miniconda3/envs/__hyphy@2.3.14/lib/hyphy/TemplateBatchFiles/libv3/convenience/regexp.bf
+Loaded 'libv3/all-terms.bf' from /home/inithello/miniconda3/envs/__hyphy@2.3.14/lib/hyphy/TemplateBatchFiles/libv3/all-terms.bf
+Already loaded 'libv3/IOFunctions.bf' from /home/inithello/miniconda3/envs/__hyphy@2.3.14/lib/hyphy/TemplateBatchFiles/libv3/IOFunctions.bf
+Already loaded 'libv3/all-terms.bf' from /home/inithello/miniconda3/envs/__hyphy@2.3.14/lib/hyphy/TemplateBatchFiles/libv3/all-terms.bf
+Variable 'MPI_NODE_COUNT' was not initialized prior to being used

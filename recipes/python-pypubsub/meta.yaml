@@ -1,0 +1,36 @@
+{% set name = "pypubsub" %}
+{% set version = "3.3.0" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  url: https://github.com/schollii/{{ name }}/archive/v{{ version }}.tar.gz
+  sha256: b712b6c5da021a9d584487278127af7e09bcc144812f5f1138ecde8f029cb63b
+
+build:
+  number: 0
+  script: "python setup.py install --single-version-externally-managed --record=record.txt"
+
+requirements:
+  build:
+    - python
+  run:
+    - python
+
+test:
+  commands:
+    - /bin/true
+
+about:
+  home: http://github.com/mad-lab/transit
+  license: GPL-3
+  license_family: GPL
+  summary: 'TRANSIT'
+  description: |
+    TRANSIT is a software that can be used to analyze Tn-Seq datasets.
+    It includes various statistical calculations of essentiality of
+    genes or genomic regions (including conditional essentiality
+    between 2 conditions).
+  dev_url: https://github.com/simongog/sdsl-lite
