@@ -195,7 +195,7 @@ recipes/r-coloc
 recipes/r-dartr
 recipes/r-data.table
 recipes/r-dbchip
-recipes/r-deconstructsigs
+#recipes/r-deconstructsigs
 recipes/r-deoptimr
 recipes/r-diptest
 recipes/r-dpeak
@@ -1886,12 +1886,10 @@ recipes/jali
 recipes/intervalstats
 
 # failing
-recipes/igblast
 recipes/igblast/1.4.0
 
 # missing fortran lib, will fix this upstream
 recipes/ig-checkfcs
-recipes/kfoots
 
 # I got far with desmon but not it fails inside Docker with a missing perl module
 recipes/desman
