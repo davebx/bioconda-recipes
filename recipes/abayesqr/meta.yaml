@@ -1,0 +1,39 @@
+{% set version = "1.0.0" %}
+{% set sha256 = "d5d9b0b134724909681ac8ed257fcad8a67a868693113e4d0011d8e769c1fd68" %}
+
+package:
+  name: abayesqr
+  version: '{{ version }}'
+
+source:
+  url: https://github.com/davebx/aBayesQR/archive/{{ version }}.tar.gz
+  sha256: '{{ sha256 }}'
+
+build:
+  number: 4
+  skip: true # [osx]
+
+requirements:
+  build:
+    - '{{ compiler("cxx") }}'
+  run:
+    - libstdcxx-ng
+    - biopython=1.73
+
+test:
+  commands:
+    - aBayesQR
+
+about:
+  home: https://github.com/davebx/aBayesQR.git
+  license: MIT
+  summary: |
+    aBayesQR is a viral quasispecies reconstruction algorithm that employs a
+    maximum-likelihood framework to infer individual sequences in a mixture from
+    high-throughput sequencing data. The search for the most likely quasispecies
+    is conducted on long contigs constructed from the set of short reads, which
+    enables identification of closely related haplotypes in a population and
+    provides computational tractability of the Bayesian method. aBayesQR is the
+    first method which is capable of detecting and reliably reconstructing viral
+    haplotypes having very small mutual genetic distances.
+  dev_url: https://github.com/SoYeonA/aBayesQR
