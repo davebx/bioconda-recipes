@@ -1,0 +1,35 @@
+{% set name = "PretextView" %}
+{% set version = "0.1.5" %}
+{% set sha256 = "0f55ff455bb748ae9cd3336b6be1efb3c860d04dd690d614c7288c3ff7794e7e" %}
+
+package:
+  name: "{{ name|lower }}"
+  version: "{{ version }}"
+
+source:
+  url: https://github.com/wtsi-hpag/{{ name }}/archive/{{ version }}.tar.gz
+  sha256: {{ sha256 }}
+
+build:
+  number: 0
+
+requirements:
+  build:
+    - {{ compiler('cxx') }}
+    - make
+    - clang>=9.0.0
+    - python
+    - xorg-libx11
+    - glfw
+    - mesa-libgl-devel-cos6-x86_64
+
+test:
+  commands:
+    - {{ name }}
+
+about:
+  home: https://github.com/wtsi-hpag/PretextView
+  license: MIT
+  license_file: LICENCE
+  license_family: MIT
+  summary: Paired REad TEXTure Viewer. OpenGL Powered Pretext Contact Map Viewer.
