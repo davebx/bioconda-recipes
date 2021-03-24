@@ -16,12 +16,19 @@ build:
 requirements:
   build:
     - {{ compiler('cxx') }}
-    - make
-    - clang>=9.0.0
-    - python
+    - {{ cdt('mesa-libgl-devel') }}
+    - {{ cdt('mesa-dri-drivers') }}
+    - {{ cdt('libselinux') }}
+    - {{ cdt('libxdamage') }}
+    - {{ cdt('libxxf86vm') }}
+    - {{ cdt('libxfixes') }}
+    - xorg-libxext
     - xorg-libx11
+    - make
+    - cmake
+  host:
+    - python
     - glfw
-    - mesa-libgl-devel-cos6-x86_64
 
 test:
   commands:
@@ -33,3 +40,10 @@ about:
   license_file: LICENCE
   license_family: MIT
   summary: Paired REad TEXTure Viewer. OpenGL Powered Pretext Contact Map Viewer.
+
+extra:
+  identifiers:
+    - doi:10.1093/bioinformatics/btv383
+  container:
+    # needed for libGL.so.1
+    extended-base: true
