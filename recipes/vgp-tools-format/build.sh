@@ -21,7 +21,8 @@ cd ./VGP
 # sed -i.bak 's/cd HTSLIB; make clean; cd ..//g' Makefile
 # sed -i.bak 's/tar -zcf VGPtools.tar.gz Makefile *.h *.c LIBDEFLATE HTSLIB//g' Makefile
 # sed -i.bak 's/gcc/${CC}/g' Makefile
-cat Makefile
+# cat Makefile
+find $BUILD_PREFIX/include -type f
 
 COMPILER=${CC} make prefix=${PREFIX} CC=${CC} AR=${AR} RANLIB=${RANLIB} CFLAGS="$CFLAGS" LDFLAGS="$LDFLAGS"
 

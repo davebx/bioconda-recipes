@@ -82,19 +82,39 @@ index 87a5f7e..93850a5 100644
  	make clean
 -	tar -zcf VGPtools.tar.gz Makefile *.h *.c LIBDEFLATE HTSLIB
 diff --git a/VGP/VGPseq.c b/VGP/VGPseq.c
-index ae25fab..0b7d83a 100644
+index ae25fab..e9386f8 100644
 --- a/VGP/VGPseq.c
 +++ b/VGP/VGPseq.c
-@@ -28,9 +28,9 @@
+@@ -22,15 +22,15 @@
+ #include <fcntl.h>
+ #include <sys/stat.h>
+ #include <stdbool.h>
++#include <libdeflate.h>
++#include <htslib/hts.h>
++#include <htslib/hfile.h>
++#include <htslib/cram.h>
+ 
+ #include "VGPschema.h"
+ 
  #include "gene_core.h"
  #include "../Core/ONElib.h"
- #include "LIBDEFLATE/libdeflate.h"
+-#include "LIBDEFLATE/libdeflate.h"
 -#include "HTSLIB/htslib/hts.h"
 -#include "HTSLIB/htslib/hfile.h"
 -#include "HTSLIB/cram/cram.h"
-+#include "htslib/hts.h"
-+#include "htslib/hfile.h"
-+#include "cram/cram.h"
  
  #undef    DEBUG_FIND
  #undef    DEBUG_OUT
+@@ -1695,9 +1695,9 @@ static void *bam_output_thread(void *arg)
+  *
+  ********************************************************************************************/
+ 
+-#include "htslib/hts.h"
+-#include "htslib/hfile.h"
+-#include "cram/cram.h"
++#include <htslib/hts.h>
++#include <htslib/hfile.h>
++#include <htslib/cram.h>
+ 
+ int ITF_LEN[16] = { 0, 0, 0, 0,
+                     0, 0, 0, 0,
