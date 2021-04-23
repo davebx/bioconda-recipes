@@ -15,10 +15,13 @@ source:
 
 requirements:
   build: 
+    - xz
+    - zlib
+    - bzip2
     - {{ compiler("c") }}
     - make
   host:
-    - htslib
+#    - htslib==1.10.2
     - libcurl
     - bzip2
     - xz
